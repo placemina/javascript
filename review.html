@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 연습</title>
+</head>
+<body>
+    <p id="content" style="color:blue;">Hello!</p>
+    
+    <script>
+        function demo(){
+            
+           x=document.getElementById("content");
+           x.innerHTML ="내용이 변경 되었습니다";
+           x.style .color="green";
+           x.style.backgroundColor="skyblue";
+           x.style.fontStyle="italic";
+           x.style.padding="20px";
+           x.style.visibility="hidden";
+        }
+        function get(){
+            document.getElementById("ex").innerHTML;
+        }
+        function set(v){
+            document.getElementById("ex").innerHTML=v;
+
+        }
+    </script>
+    <button type="button" onclick="demo()">버튼을 눌러주세요</button>
+    <div id="ex">여기가 div로 선언되었습니다.</div>
+    <a href="#" onclick="get()">div 요소 내용 출력하기</a><br>
+    <a href="#" onclick="set('변경이 되었습니다')">div 요소 내용 변경하기</a>
+    <p id="p1">This is a Photograph.</p>
+    <script>
+        function changeStlye(){
+            document.getElementById("p1").style.color="red";
+            document.getElementById("p1").style.fontFamily="Century Schoolbock";
+            document.getElementById("p1").style.fontStyle="italic";
+        }
+        
+        
+    </script>
+    <input type="button" onclick="changeStlye()" value="눌러보세요"> <br>
+    <h3 id="heading">이것은 해딩입니다</h3>
+    <input type="button" value="요소숨김" onclick="document.getElementById('heading').style.visibility= 'hidden'">
+    <input type="button" value="요소표시" onclick="document.getElementById('heading').style.visibility= 'visible'"><br>
+     <img id="img" src="pome.png" width="120" height="180">
+     <script>
+        function changeImage(){
+            document.getElementById("img").src="poodle.png";
+        }
+        function changeImage2(){
+            document.getElementById("img").src="pome.png";
+        }
+        
+        
+     </script>
+      <input type="button" onclick="changeImage()" value="눌러보세요">
+      <input type="button" onclick="changeImage2()" value="원래대로 돌리기">
+</body>
+</html>
